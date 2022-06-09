@@ -53,7 +53,7 @@ let sectionInViewport = function (elem) {
   );
 };
 
-// event to listner to look out for scroll. loop sections to asses if on scroll it is in viewport then add active class.
+/* event to listner to look out for scroll. Loop sections to asses if on scroll it is in viewport then add active class. */
 
 window.addEventListener("scroll", () => {
   pageSections.forEach((section) => {
@@ -76,11 +76,15 @@ navbar.addEventListener("click", function (e) {
   }
 });
 
-// scroll to top using button
+// fucntionality to scroll to top of page using button
+
+/* call the function of btn scroll when user is scrolling beyond certain point */
 
 window.onscroll = function () {
   btnScroll();
 };
+
+/* This function assesses when user has scrolled beyond a certain point on the page then displays button to give the option to scroll back to the top of the page. */
 
 function btnScroll() {
   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
@@ -90,19 +94,8 @@ function btnScroll() {
   }
 }
 
+/* This function takes user to top of screen when clickng the button. The onclick listener is present in HTML to allow fucntionality to work */
 function topFunction() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 }
-
-/**
- * End Main Functions
- * Begin Events
- *
- */
-
-// Build menu
-
-// Scroll to section on link click
-
-// Set sections as active

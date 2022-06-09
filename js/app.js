@@ -14,11 +14,6 @@
  */
 
 /**
- * Comments should be present at the beginning of each procedure and class.
- * Great to have comments before crucial code sections within the procedure.
- */
-
-/**
  * Define Global Variables
  *
  */
@@ -28,19 +23,9 @@ const navbar = document.getElementById("navbar__list");
 const pageSections = document.querySelectorAll("section");
 const btn = document.getElementById("scrollBtn");
 
-/**
- * End Global Variables
- * Start Helper Functions
- *
- */
-
-/**
- * End Helper Functions
- * Begin Main Functions
- *
- */
-
 // build the nav
+
+/* function to loop through each section and create the list item with anchor tag. We can the append this to the navbar menu to dynamically create the menu list on the navbar */
 
 function navigation() {
   pageSections.forEach((section) => {
@@ -54,7 +39,8 @@ navigation();
 
 // Add class 'active' to section when near top of viewport
 
-// helper function to determine if section is in viewport.
+/* helper function to determine if section is in viewport. */
+
 let sectionInViewport = function (elem) {
   let bounding = elem.getBoundingClientRect();
   return (

@@ -18,7 +18,7 @@
  *
  */
 "use strict";
-
+const navLi = document.querySelectorAll("menu__link");
 const navbar = document.getElementById("navbar__list");
 const pageSections = document.querySelectorAll("section");
 const btn = document.getElementById("scrollBtn");
@@ -36,8 +36,6 @@ function navigation() {
 }
 
 navigation();
-
-// Add class 'active' to section when near top of viewport
 
 /* helper function to determine if section is in viewport. */
 
@@ -59,8 +57,14 @@ window.addEventListener("scroll", () => {
   pageSections.forEach((section) => {
     if (sectionInViewport(section)) {
       section.classList.add("your-active-class");
+      document
+        .querySelector(`a[href="#${section.id}"]`)
+        .classList.add("your-active-class");
     } else {
       section.classList.remove("your-active-class");
+      document
+        .querySelector(`a[href="#${section.id}"]`)
+        .classList.remove("your-active-class");
     }
   });
 });
